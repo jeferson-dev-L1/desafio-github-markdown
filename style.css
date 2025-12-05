@@ -1,24 +1,85 @@
-/* ======== ESTILOS GERAIS ======== */
+/* =======================
+   Tema: Amarelo Vibrante
+   ======================= */
+
+/* reset mínimo */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* fundo amarelo vibrante — usamos !important para garantir que não seja sobrescrito por estilos inline/antigos */
 body {
-    margin: 0;
-    padding: 0;
-    background: #FFD400; /* Amarelo vibrante */
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  background: #FFD400 !important; /* amarelo vivo */
+  height: 100vh;
+  font-family: Inter, Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* ======== CONTAINER ======== */
+/* container central */
 #gameContainer {
-    text-align: center;
+  text-align: center;
+  width: 100%;
+  max-width: 760px;
+  padding: 18px;
 }
 
-/* ======== TÍTULO ======== */
-h1 {
-    color: #111;
-    font-size: 32px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+/* título */
+.title {
+  color: #111;
+  font-size: 32px;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+/* placar */
+#scoreBoard {
+  color: #111;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* canvas com borda estilizada */
+canvas {
+  display: block;
+  margin: 0 auto;
+  width: 400px;    /* visual — o elemento ainda tem width/height em atributos */
+  height: 400px;
+  background: #ffffff; /* fundo do jogo branco para contraste com amarelo */
+  border-radius: 12px;
+  border: 6px solid #111; /* borda escura para contraste */
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+/* overlay Game Over centralizado */
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(17,17,17,0.85);
+  z-index: 100;
+}
+
+.hidden { display: none; }
+
+.overlay-content {
+  background: linear-gradient(180deg, #ffffff 0%, #f3f3f3 100%);
+  padding: 22px 28px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  color: #111;
+}
+
+button {
+  margin-top: 12px;
+  padding: 10px 18px;
+  background: #111;
+  color: #FFD400;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
 
