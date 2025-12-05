@@ -53,9 +53,14 @@ function drawBackground() {
 }
 
 // ===============================
-// Desenhar comida
+// Desenhar comida (CORRIGIDO)
 // ===============================
 function drawFood() {
+    // 💡 CORREÇÃO APLICADA: Verifica se 'food' existe para prevenir o TypeError
+    if (!food || food.x === undefined || food.y === undefined) {
+        return; 
+    }
+    
     ctx.fillStyle = "red";
     ctx.fillRect(food.x * box, food.y * box, box, box);
 }
@@ -118,7 +123,8 @@ function gameLoop() {
     }
 
     // Bateu no próprio corpo?
-    for (let part of snake) {
+    // 💡 CORREÇÃO: Usar um slice para pular a cabeça (o primeiro segmento)
+    for (let part of snake.slice(1)) {
         if (part.x === head.x && part.y === head.y) {
             triggerGameOver();
             return;
@@ -139,3 +145,5 @@ function gameLoop() {
 
 // Inicia automaticamente
 initGame();
+
+    
