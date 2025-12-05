@@ -2,8 +2,8 @@ const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
 // Grid
-const box = 20;
-const gridSize = canvas.width / box;
+const box = 20; 
+const gridSize = canvas.width / box; 
 
 // Variáveis
 let snake;
@@ -13,13 +13,13 @@ let score;
 let gameOver = false;
 
 let gameInterval;
-const GAME_SPEED = 120;
+const GAME_SPEED = 120; 
 
 // ===============================
 // Iniciar Jogo
 // ===============================
 function initGame() {
-    snake = [{ x: 10, y: 10 }];
+    snake = [{ x: 10, y: 10 }]; 
     direction = "RIGHT";
     food = spawnFood();
     score = 0;
@@ -53,9 +53,30 @@ function drawBackground() {
 }
 
 // ===============================
-// Desenhar comida
+// Desenhar grade (Melhoria de visualização)
+// ===============================
+function drawGrid() {
+    ctx.strokeStyle = "#111"; 
+    for (let i = 0; i < gridSize; i++) {
+        ctx.beginPath();
+        ctx.moveTo(i * box, 0);
+        ctx.lineTo(i * box, canvas.height);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(0, i * box);
+        ctx.lineTo(canvas.width, i * box);
+        ctx.stroke();
+    }
+}
+
+// ===============================
+// Desenhar comida (CORRIGIDO: Previne TypeError)
 // ===============================
 function drawFood() {
+    // 💡 CORREÇÃO: Verifica se 'food' existe antes de tentar desenhar
+    if (!food) return; 
+    
     ctx.fillStyle = "red";
     ctx.fillRect(food.x * box, food.y * box, box, box);
 }
@@ -95,15 +116,17 @@ function triggerGameOver() {
 
 // ===============================
 // Loop principal
-// ===============================
+//===============================
 function gameLoop() {
     if (gameOver) return;
 
+    // 1. Desenhar na ordem correta
     drawBackground();
+    drawGrid(); // Desenha a grade
     drawFood();
     drawSnake();
 
-    // Nova cabeça
+    // 2. Mover a cobra 
     let head = { x: snake[0].x, y: snake[0].y };
 
     if (direction === "UP") head.y--;
@@ -111,31 +134,35 @@ function gameLoop() {
     if (direction === "LEFT") head.x--;
     if (direction === "RIGHT") head.x++;
 
+    // 3. Checar Colisões
+    
     // Bateu na parede?
     if (head.x < 0 || head.y < 0 || head.x >= gridSize || head.y >= gridSize) {
         triggerGameOver();
         return;
     }
 
-    // Bateu no próprio corpo?
-    for (let part of snake) {
+    // Bateu no próprio corpo? (CORRIGIDO: Usa .slice(1) para ignorar a cabeça)
+    for (let part of snake.slice(1)) {
         if (part.x === head.x && part.y === head.y) {
             triggerGameOver();
             return;
         }
     }
 
-    // Comer comida
+    // 4. Comer comida
     if (head.x === food.x && head.y === food.y) {
         score++;
         document.getElementById("scoreBoard").textContent = "Score: " + score;
         food = spawnFood();
     } else {
-        snake.pop();
+        snake.pop(); // Remove a cauda
     }
 
+    // Adiciona a nova cabeça na frente
     snake.unshift(head);
 }
 
 // Inicia automaticamente
 initGame();
+
