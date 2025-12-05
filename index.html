@@ -1,35 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake Game</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1 class="title">Snake Game</h1>
-    <p id="scoreBoard">Score: 0</p>
+    <h1 class="title">Snake Game</h1>
+    <p id="scoreBoard">Score: 0</p>
 
-    <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
 
-    <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div id="gameOverOverlay" class="overlay hidden">
+        <div class="overlay-content">
+            <h2>GAME OVER</h2>
+            <p id="finalScore"></p>
+            <button id="restartBtn">Reiniciar</button>
+        </div>
+    </div>
 
-    <div id="gameOverOverlay" class="overlay hidden">
-        ```
-
-    <div id="gameOverOverlay" class="overlay hidden">
-        <div class="overlay-content">
-            <h2>GAME OVER</h2>
-            <p id="finalScore"></p>
-            <button id="restartBtn">Reiniciar</button>
-        </div>
-    </div>
-
-    <script src="game.js"></script>
+    <script src="game.js"></script>
 </body>
 </html>
-
+  
 
 
 
