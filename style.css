@@ -52,6 +52,7 @@ canvas {
     color: white;
 }
 
+
 button {
     padding: 12px 25px;
     margin-top: 15px;
@@ -59,7 +60,7 @@ button {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    background: #0f0;
+    background: #ffa500; /* ⬅️ ALTERAÇÃO AQUI (Laranja) */
     color: #000;
     font-weight: bold;
 }
