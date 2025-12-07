@@ -21,7 +21,7 @@ const SPEED_DECREMENT = 10; // Quanto a velocidade diminui a cada nível
 let currentSpeed = INITIAL_SPEED; // Variável para rastrear a velocidade atual
 
 //  VARIÁVEIS DE ÁUDIO (SFX)
-const EAT_SOUND_URL = 'assets/eat.mp3/';
+const EAT_SOUND_URL = 'assets/eat.mp3';
 const GAMEOVER_SOUND_URL = 'assets/gameover.mp3';
 
 const eatSound = new Audio(EAT_SOUND_URL);
