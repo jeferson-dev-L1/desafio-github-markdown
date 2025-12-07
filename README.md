@@ -9,11 +9,11 @@ O jogo da cobrinha é um passatempo clássico que envolve controle de uma cobra 
 
 Tecnologias Utilizadas
 
-  . HTML5 Canvas: Para renderização de pixels.
+  . HTML5 Canvas
 
-  . JavaScript puro: para toda a lógica e game loop.
-  
-  . CSS3: para estilização da interface e tela de Game Over.
+  . JavaScript
+
+  . CSS3
 
   Como Jogar
 
