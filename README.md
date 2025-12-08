@@ -1,13 +1,20 @@
-Jogo da Cobrinha.
+ # 🐍 Jogo da Cobrinha (Snake Game)
 
-Este é o meu projeto de um jogo clássico da cobrinha e tenho certeza que você já jogou um dia! O objetivo é bem simples: fornecer um código base limpo e funcional.
-O projeto também serve como uma oportunidade para aqueles estudantes de programação que desejam aprender sobre a lógica de game loop  e colisão em JavaScrript. O jogo está 100% funcional, mas sempre há espaços para melhorias!
+Este é o meu projeto de um jogo clássico da cobrinha e tenho certeza de que você já jogou um dia!  
+O objetivo é fornecer um **código base limpo, funcional e didático**.
 
-Sobre o Jogo
+Este projeto também serve como uma ótima oportunidade para estudantes de programação que desejam aprender sobre **lógica de game loop, movimentação e colisão em JavaScript**.  
+O jogo está **100% funcional**, mas sempre há espaço para melhorias! 🚀
 
-O jogo da cobrinha é um passatempo clássico que envolve controle de uma cobra que se move em uma gade. O objetivo é comer a comida vermelha para crescer e ganhar pontos. O desafio é evitar a colisão com as paredes ou com o próprio corpo em crescimento.
 
-Tecnologias Utilizadas
+ ## 🎮 Sobre o Jogo
+
+O jogo da cobrinha é um passatempo clássico que envolve o controle de uma cobra que se move em uma grade.  
+O objetivo é **comer a comida vermelha** para crescer e ganhar pontos.  
+O desafio é **evitar colisões com as paredes ou com o próprio corpo**.
+
+
+ ## 🛠️ Tecnologias Utilizadas
 
   . HTML5 Canvas
 
@@ -15,19 +22,28 @@ Tecnologias Utilizadas
 
   . CSS3
 
-  Como Jogar
+ ## 🎯 Como Jogar
 
-  Use as setas do teclado (Cima, Baixo, Esquerda, Dirteita) para controlar a direção da cobra.
+Use as setas do teclado para controlar a direção da cobra:
 
-Como Contribuir
+- ⬆️ Cima  
+- ⬇️ Baixo  
+- ⬅️ Esquerda  
+- ➡️ Direita  
 
-Se você deseja contribuir para a evolução deste projeto, fique à vontade para realizar Issues (para reporttar bugs) e Pull Requests (para enviar código). Aqui estão algumas maneiras pelas quais você pode ajudar:
-    1. Implementar a lógica de aumento de velocidade progressiva (dificuldade).
-    2. Adicionar sons (SFX) para comer a comida e para a tela Game Over.
-    3. Aprimorar o visual da cobra (cabeça/cauda).
-    4. Documentar o código ou adicionar comentários para facilitar a compreensão.
+ ## 🤝 Como Contribuir
 
-Como começar
+ Se você deseja contribuir para a evolução deste projeto, fique à vontade para abrir **Issues** (para reportar bugs) e enviar **Pull Requests** (para contribuir com código).
+
+1. Implementar novos recursos ou adicionar melhorias ao jogo.
+
+2. Corrigir bugs ou comportamentos inesperados.
+
+2. Aprimorar a interface visual, ajustando o layout e estilos com CSS.
+
+3. Documentar o código, criando comentários ou explicações que facilitem o aprendizado de iniciantes.
+
+ ## 🚀 Como Começar
 
     1. Faça um fork deste repositório.
     2. Clone o fork para o seu ambiente local.
